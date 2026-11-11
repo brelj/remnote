@@ -1,0 +1,158 @@
+/* ==========================================================
+   PASTEL STUDY CLUB — RemNote Custom CSS
+   Light, organized, colorful, and readable.
+   Designed for RemNote light mode. Version 1.0
+   ========================================================== */
+
+/* Optional font load: requires an internet connection.
+   If unavailable, the fallback fonts are used. */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --psc-paper: #FFFBF8;
+  --psc-white: #FFFFFF;
+  --psc-ink: #333247;
+  --psc-muted: #79768B;
+  --psc-line: #F0E6EE;
+  --psc-pink: #F17CC0;
+  --psc-peach: #FFA58D;
+  --psc-yellow: #FFD278;
+  --psc-sage: #BFE4B7;
+  --psc-aqua: #83D9DC;
+  --psc-violet: #8278F5;
+  --psc-font: 'Barlow Condensed', 'Arial Narrow', 'Roboto Condensed', sans-serif;
+}
+
+/* 1 — Main writing surface and typography */
+body:not(.dark) .rn-editor,
+body:not(.dark) .rn-all-notes {
+  background: var(--psc-paper);
+  color: var(--psc-ink);
+}
+
+.rn-editor,
+.rn-doc-title,
+.rn-sidebar,
+.rn-queue,
+.rn-all-notes {
+  font-family: var(--psc-font);
+}
+
+.rn-editor .rem-text {
+  font-family: var(--psc-font);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.48;
+  letter-spacing: 0.015em;
+}
+
+/* 2 — Bold ALL-CAPS document titles and native headings */
+.rn-doc-title {
+  color: var(--psc-ink);
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
+}
+
+.rn-editor .rem-text.rem-header--1,
+.rn-editor .rem-text.rem-header--2,
+.rn-editor .rem-text.rem-header--3 {
+  font-family: var(--psc-font);
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.075em;
+  line-height: 1.24;
+  border-radius: 9px;
+  box-sizing: border-box;
+}
+
+/* H1: lilac header stripe, bold violet text */
+.rn-editor .rem-text.rem-header--1 {
+  font-size: 25px;
+  color: #5C52B7;
+  background: #F0ECFF;
+  border-left: 5px solid var(--psc-violet);
+  padding: 7px 12px;
+  margin: 10px 0 6px;
+}
+
+/* H2: soft pink header */
+.rn-editor .rem-text.rem-header--2 {
+  font-size: 21px;
+  color: #A43E78;
+  background: #FCEAF4;
+  border-left: 4px solid var(--psc-pink);
+  padding: 5px 10px;
+  margin: 8px 0 4px;
+}
+
+/* H3: aqua underline, without a heavy box */
+.rn-editor .rem-text.rem-header--3 {
+  font-size: 18px;
+  color: #267A7C;
+  background: transparent;
+  border-bottom: 3px solid #B5ECE9;
+  padding: 3px 2px;
+  margin: 7px 0 3px;
+  border-radius: 0;
+}
+
+/* 3 — Subtle stationery-style chrome */
+body:not(.dark) .rn-sidebar {
+  background: #FBF5FB;
+  border-right: 1px solid var(--psc-line);
+}
+
+body:not(.dark) .rn-doc-header {
+  background: var(--psc-paper);
+  border-bottom: 1px solid var(--psc-line);
+}
+
+/* 4 — Tags and references */
+body:not(.dark) .rn-tag {
+  color: #6558A9;
+  background: #EEE9FF;
+  border: 1px solid #DED5FF;
+  border-radius: 999px;
+  padding: 1px 7px;
+  font-weight: 600;
+}
+
+body:not(.dark) .rn-editor .rem-reference-container {
+  color: #377E89;
+  background: #E5F7F5;
+  border-radius: 5px;
+  padding: 0 3px;
+  text-decoration: none;
+}
+
+/* 5 — Gentle accent on fill-in-the-blank cards */
+body:not(.dark) .rn-fill-in-blank {
+  border-radius: 6px;
+  background: #FFF1D7;
+  color: #715120;
+}
+
+/* 6 — Flashcard queue font: keep content easy to read */
+.rn-queue {
+  font-family: var(--psc-font);
+  color: var(--psc-ink);
+}
+
+/* 7 — Soft selection color */
+.rn-editor ::selection,
+.rn-doc-title::selection {
+  background: #F7C6E1;
+  color: #2F2940;
+}
+
+/* ==========================================================
+   EASY CUSTOMIZATION
+   Change the six color values under :root to your favorites.
+   For a wider body font change --psc-font to:
+   'Arial', sans-serif;
+   If older heading selectors stop working after a RemNote
+   update, use RemNote's CSS Selector Helper to re-target them.
+   ========================================================== */
